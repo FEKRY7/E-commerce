@@ -12,11 +12,11 @@ const { addReview, updateReview } = require('./review.controler.js')
 
 router.post("/",
 isAuthenticated,
-isAuthorized("user","admin"),
+isAuthorized("user"),
 validation(addReviewVal),
 addReview)
 
 
-router.patch("/:id",isAuthenticated,isAuthorized("user","admin"), validation(updateReviewVal),updateReview)
+router.patch("/:id",isAuthenticated,isAuthorized("user"), validation(updateReviewVal),updateReview)
 
 module.exports = router 

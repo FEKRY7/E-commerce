@@ -31,13 +31,13 @@ upDateSubcategory)
 
 router.delete('/:id',
 isAuthenticated,isAuthorized("admin"),
- // validation(deleteSubcategorySchema),
+validation(deleteSubcategorySchema),
 deleteSubcategory)
 
 
 
 router.get('/',
-//validation(getAllSubcategorySchema),
+validation(getAllSubcategorySchema),
 AllSubcategories)
 
 module.exports =  router 

@@ -16,7 +16,7 @@ router.post('/',
 isAuthenticated,
 isAuthorized("admin"),
 fileUpload().single("brand"),
-// validation(createBrandSchema),
+validation(createBrandSchema),
 createBrand)
 
 router.patch('/:id',
@@ -30,7 +30,7 @@ updateBrand)
 router.delete('/:id',
 isAuthenticated,
 isAuthorized("admin"),
-// validation(deleteBrandSchema),
+validation(deleteBrandSchema),
 deleteBrand)
 
 

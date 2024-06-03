@@ -16,7 +16,7 @@ router.use("/:categoryId/Subcategory",Subcategory)
 router.post('/',
 isAuthenticated,isAuthorized("admin"),
 fileUpload().single("product"), 
-// validation(addCategorySchema),
+validation(addCategorySchema),
 addCategory) 
  
 

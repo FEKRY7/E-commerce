@@ -12,7 +12,7 @@ const { cancelOrder, createOrder, orderWebhook } =require('./order.controller.js
 
 router.post("/", 
 isAuthenticated , 
-isAuthorized("user","admin"),
+isAuthorized("user"),
 // validation(createOrderVal),
 createOrder
 )

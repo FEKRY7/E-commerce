@@ -20,7 +20,7 @@ const validation = (schema) => {
       const errorMessage = validationResult.error.details.map((obj) => {
         return obj.message;
       });
-      return Firest(res, errorMessage, 400, http.SUCCESS);
+      return Firest(res, errorMessage, 400, http.FAIL);
     }
 
     return next();

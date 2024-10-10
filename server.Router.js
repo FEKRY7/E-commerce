@@ -24,7 +24,7 @@ const AppRouter = (app) => {
     if (req.originalUrl === "/Order/Webhook") {
       return next()
     }
-    express.json()(req, res, next)
+    express.json()
   })
 
 
